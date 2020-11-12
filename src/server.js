@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const cors = require('cors');
-const routers = require('./routers')
+const routers = require('./routes')
 require('dotenv').config()
 
 //Configuration
@@ -15,8 +15,9 @@ require('dotenv').config()
     
 
 //Rotas
-     app.use('/v1', routers)
-     
+     app
+     .use('/v1', routers)
+
 // set port
     const port = process.env.APP_PORT
     app.listen(port, function() {

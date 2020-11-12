@@ -3,7 +3,7 @@ const router = express.Router()
 const controller_pesquisa = require('./controllers/pesquisas-controller')
 
 
-//Default Route
+//Routes
     router.get('/pesquisas', controller_pesquisa.get);
 
 //Routes
